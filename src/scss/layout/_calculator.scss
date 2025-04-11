@@ -4,11 +4,19 @@
 	height: 100%;
 	flex-basis: 49%;
 	padding: 2.35rem;
+	@include mx.mobile(v.$mobile) {
+		padding: 1rem;
+	}
 	@include mx.flex($aling: flex-start, $justify: flex-start, $gap: 4.5rem);
 
 	&__header {
 		width: 100%;
 		@include mx.flex($justify: space-between, $direction: row, $gap: 0);
+		@include mx.mobile(v.$mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+		}
 	}
 
 	&__text-clear {

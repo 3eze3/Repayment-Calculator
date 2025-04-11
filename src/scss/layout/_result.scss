@@ -8,5 +8,10 @@
 	border-bottom-left-radius: 5rem;
 	border-bottom-right-radius: 1.5rem;
 	padding-inline: 2.5rem;
+
 	@include mx.flex($gap: 1rem);
+	@include mx.mobile(v.$mobile) {
+		border-radius: 0rem;
+		padding: 1rem 0.5rem;
+	}
 }
