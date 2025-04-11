@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="module" src="./js/index.mjs"></script>
+
+		<title>Mortgage repayment calculator</title>
+	</head>
+	<body>
+		<main class="main">
+			<section class="calculator">
+				<header class="calculator__header">
+					<h1 class="calculator__title">Mortgage Calculator</h1>
+					<button class="calculator__btn-clear">
+						<span class="calculator__text-clear">Clear All</span>
+					</button>
+				</header>
+
+				<!--  -->
+				<form class="form">
+					<div class="form__group">
+						<label class="form__label" for="amount">Mortgage Amount</label>
+						<input class="form__input" type="text" name="" id="amount" />
+						<span class="form__symbol">$</span>
+					</div>
+					<!--  -->
+					<div class="form__wrapper">
+						<div class="form__group">
+							<label class="form__label form__label-specification" for="">
+								Mortgage Term
+							</label>
+							<input
+								class="form__input form__input-specification"
+								type="text"
+								name=""
+								id="" />
+							<span class="form__symbol form__symbol-right">years</span>
+						</div>
+						<!--  -->
+						<div class="form__group">
+							<label class="form__label form__label-specification" for="">
+								Interest Rate
+							</label>
+							<input
+								class="form__input form__input-specification"
+								type="text"
+								name=""
+								id="" />
+							<span class="form__symbol form__symbol-right">%</span>
+						</div>
+					</div>
+					<!--  -->
+					<div class="form__group form__group-type">
+						<span class="form__label-type" role="label">Morgage Type</span>
+						<label class="form__box" for="repayment">
+							<input
+								class="form__radio"
+								type="radio"
+								name="type"
+								id="repayment" />
+							Repayment
+						</label>
+						<label class="form__box" for="interest">
+							<input
+								class="form__radio"
+								type="radio"
+								name="type"
+								id="interest" />
+							Interest Only
+						</label>
+					</div>
+					<!--  -->
+					<button class="form__btn">
+						<img
+							class="form__logo"
+							src="./assets/images/icons/icon-calculator.svg"
+							aria-hidden="true" />
+						<span class="form__text"> Calculate Repayments </span>
+					</button>
+				</form>
+			</section>
+			<!--  -->
+			<section class="main__result result">
+				<h2 class="sr-only">Result prices</h2>
+				<section class="result__empty empty">
+					<img
+						class="empty__img"
+						src="./assets/images/ilustration/illustration-empty.svg"
+						aria-hidden="true" />
+					<h2 class="empty__title">Results shown here</h2>
+					<p class="empty__description">
+						Complete the form and click “calculate repayments” to see what your
+						monthly repayments would be.
+					</p>
+				</section>
+
+				<!-- <section class="result__completed completed">
+					<h2 class="completed__title">Your results</h2>
+					<p class="completed__description">
+						Your results are shown below based on the information you provided.
+						To adjust the results, edit the form and click “calculate
+						repayments” again.
+					</p>
+					<article class="completed__wrapper">
+						<h3 class="completed__repayments">Your monthly repayments</h3>
+						<span class="completed__price">&euro;1,797.74</span>
+						<div class="completed__box">
+							<h3 class="completed__term">Total you'll repay over the term</h3>
+							<span class="completed__total">&euro;593,322.94</span>
+						</div>
+					</article>
+				</section> -->
+			</section>
+		</main>
+	</body>
+</html>
