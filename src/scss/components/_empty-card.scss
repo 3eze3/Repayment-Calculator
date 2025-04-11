@@ -1,0 +1,17 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.empty {
+	@include mx.flex($gap: 0.8rem);
+	&__img {
+		width: 12rem;
+	}
+
+	&__title {
+		color: v.$white;
+	}
+
+	&__description {
+		color: v.$slate-500;
+		font-weight: 500;
+	}
+}
