@@ -1,12 +1,12 @@
 @use '../abstract/variables' as v;
-@media (prefers-reduced-motion: reduce) {
-	* {
-		-webkit-animation: none !important;
-		animation: none !important;
-		-webkit-transition: none !important;
-		transition: none !important;
-	}
-}
+// @media (prefers-reduced-motion: reduce) {
+// 	* {
+// 		-webkit-animation: none !important;
+// 		animation: none !important;
+// 		-webkit-transition: none !important;
+// 		transition: none !important;
+// 	}
+// }
 
 *,
 *::before,
@@ -74,4 +74,23 @@ input {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border-width: 0;
+}
+
+input {
+	&[type='number'] {
+		font-size: v.$plusjakatasans-bd;
+		font-weight: 700;
+		color: v.$slate-900;
+		border: none;
+		width: 100%;
+		text-align: left;
+		background: transparent;
+		font-size: inherit;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
 }
