@@ -8,14 +8,6 @@
   font-weight: 500;
   src: local("PlusJakataSans Medium"), url("../assets/fonts/PlusJakartaSans-Medium.woff2") format(woff2), url("../assets/fonts/PlusJakartaSans-Medium.woff") format(woff), url("../assets/fonts/PlusJakartaSans-Medium.ttf") format(truetype);
 }
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation: none !important;
-    animation: none !important;
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
-}
 *,
 *::before,
 *::after {
@@ -83,6 +75,21 @@ input {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+input[type=number] {
+  font-size: "PlusJakataSans Bold";
+  font-weight: 700;
+  color: hsl(202, 55%, 16%);
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  font-size: inherit;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 body {
@@ -268,15 +275,18 @@ p {
 .form__label {
   top: 0.8rem;
   left: 3.5rem;
+  transition: transform 0.2s ease-in-out;
 }
 .form__label-active {
   transform: translate(-3.5rem, -3rem);
+  transition: transform 0.2s ease-in-out;
 }
 .form__label-specification {
   left: 1rem;
 }
 .form__label-specification-active {
-  transform: translate(-1rem, -3rem);
+  transition: transform 0.2s ease-in-out;
+  transform: translate(-1rem, -2.6rem);
 }
 .form__input {
   width: 100%;
