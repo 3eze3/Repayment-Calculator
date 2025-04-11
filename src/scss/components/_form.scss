@@ -125,6 +125,12 @@
 		background-color: v.$lime;
 		height: 3.8rem;
 		border-radius: 3rem;
+		transition: opacity 0.1s ease-in-out;
+
+		&:hover {
+			opacity: 0.78;
+		}
+
 		@include mx.flex($gap: 0.85rem, $justify: flex-start, $direction: row);
 		@include mx.mobile(v.$mobile) {
 			width: 100%;

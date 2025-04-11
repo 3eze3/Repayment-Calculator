@@ -335,6 +335,10 @@ p {
   background-color: hsl(61, 70%, 52%);
   height: 3.8rem;
   border-radius: 3rem;
+  transition: opacity 0.1s ease-in-out;
+}
+.form__btn:hover {
+  opacity: 0.78;
 }
 .form__btn {
   display: flex;
