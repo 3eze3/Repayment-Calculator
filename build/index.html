@@ -23,15 +23,18 @@
 						<span class="calculator__text-clear">Clear All</span>
 					</button>
 				</header>
-
-				<!--  -->
 				<form class="form">
 					<div class="form__group">
 						<label class="form__label" for="amount">Mortgage Amount</label>
-						<input class="form__input" type="text" name="" id="amount" />
+						<input
+							class="form__input"
+							type="text"
+							name="amount"
+							id="amount"
+							required />
 						<span class="form__symbol">$</span>
+						<span class="form__label-error"> This fiels is required</span>
 					</div>
-					<!--  -->
 					<div class="form__wrapper">
 						<div class="form__group">
 							<label class="form__label form__label-specification" for="">
@@ -40,11 +43,12 @@
 							<input
 								class="form__input form__input-specification"
 								type="text"
-								name=""
-								id="" />
+								name="years"
+								id="years"
+								required />
 							<span class="form__symbol form__symbol-right">years</span>
+							<span class="form__label-error"> This fiels is required</span>
 						</div>
-						<!--  -->
 						<div class="form__group">
 							<label class="form__label form__label-specification" for="">
 								Interest Rate
@@ -52,12 +56,14 @@
 							<input
 								class="form__input form__input-specification"
 								type="text"
-								name=""
-								id="" />
+								name="interest"
+								id="interest"
+								required />
 							<span class="form__symbol form__symbol-right">%</span>
+
+							<span class="form__label-error"> This fiels is required</span>
 						</div>
 					</div>
-					<!--  -->
 					<div class="form__group form__group-type">
 						<span class="form__label-type" role="label">Morgage Type</span>
 						<label class="form__box" for="repayment">
@@ -65,7 +71,8 @@
 								class="form__radio"
 								type="radio"
 								name="type"
-								id="repayment" />
+								id="repayment"
+								required />
 							Repayment
 						</label>
 						<label class="form__box" for="interest">
@@ -73,11 +80,12 @@
 								class="form__radio"
 								type="radio"
 								name="type"
-								id="interest" />
+								id="interest"
+								required />
 							Interest Only
 						</label>
+						<span class="form__label-error"> This fiels is required</span>
 					</div>
-					<!--  -->
 					<button class="form__btn">
 						<img
 							class="form__logo"
@@ -87,10 +95,9 @@
 					</button>
 				</form>
 			</section>
-			<!--  -->
 			<section class="main__result result">
 				<h2 class="sr-only">Result prices</h2>
-				<section class="result__empty empty">
+				<section class="result__empty result__empty empty-show">
 					<img
 						class="empty__img"
 						src="./assets/images/ilustration/illustration-empty.svg"
@@ -102,7 +109,7 @@
 					</p>
 				</section>
 
-				<!-- <section class="result__completed completed">
+				<section class="result__completedresult__completed completed-hidden">
 					<h2 class="completed__title">Your results</h2>
 					<p class="completed__description">
 						Your results are shown below based on the information you provided.
@@ -117,7 +124,7 @@
 							<span class="completed__total">&euro;593,322.94</span>
 						</div>
 					</article>
-				</section> -->
+				</section>
 			</section>
 		</main>
 	</body>
