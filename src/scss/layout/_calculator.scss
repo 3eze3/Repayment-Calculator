@@ -1,0 +1,17 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.calculator {
+	height: 100%;
+	flex-basis: 49%;
+	padding: 2.35rem;
+	@include mx.flex($aling: flex-start, $justify: flex-start, $gap: 4.5rem);
+
+	&__header {
+		width: 100%;
+		@include mx.flex($justify: space-between, $direction: row, $gap: 0);
+	}
+
+	&__text-clear {
+		text-decoration: underline;
+	}
+}

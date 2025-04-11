@@ -1,0 +1,12 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as mx;
+.result {
+	height: 100%;
+	background-color: v.$slate-900;
+	flex-basis: 51%;
+	border-top-right-radius: 1.5rem;
+	border-bottom-left-radius: 5rem;
+	border-bottom-right-radius: 1.5rem;
+	padding-inline: 2.5rem;
+	@include mx.flex($gap: 1rem);
+}
