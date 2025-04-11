@@ -1,7 +1,7 @@
+import { getInputs } from '../utils/get-inputs.mjs'
+
 export function animationInput() {
-	const $inputs = document.querySelectorAll(
-		'.form__input'
-	) as NodeListOf<HTMLInputElement>
+	const $inputs = getInputs()
 	const $labels = document.querySelectorAll(
 		'.form__label'
 	) as NodeListOf<HTMLLabelElement>
@@ -21,5 +21,5 @@ export function animationInput() {
 }
 
 function isNumber(value: string): boolean {
-  return !isNaN(Number(value)) 
+	return !isNaN(Number(value))
 }
