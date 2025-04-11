@@ -14,4 +14,12 @@
 		color: v.$slate-500;
 		font-weight: 500;
 	}
+
+	&-hidden {
+		display: none;
+	}
+
+	&-show {
+		@include mx.flex($gap: 0.8rem);
+	}
 }
