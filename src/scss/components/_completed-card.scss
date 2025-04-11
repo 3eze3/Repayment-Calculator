@@ -65,4 +65,12 @@
 		color: v.$white;
 		font-size: 1.5em;
 	}
+
+	&-show {
+		@include mx.flex($aling: flex-start, $justify: strech, $gap: 1rem);
+	}
+
+	&-hidden {
+		display: none;
+	}
 }
