@@ -2,7 +2,12 @@
 @use '../abstract/mixins' as mx;
 .completed {
 	height: 100%;
-	padding-block: 2rem;
+	padding: 2rem;
+
+	@include mx.mobile(v.$mobile) {
+		padding: 2rem 0.5rem;
+	}
+
 	@include mx.flex($aling: flex-start, $justify: strech, $gap: 1rem);
 
 	&__title {
@@ -14,6 +19,9 @@
 		color: v.$slate-500;
 		font-weight: 500;
 		line-height: 1.5;
+		@include mx.mobile(v.$mobile) {
+			padding-right: 0.5rem;
+		}
 	}
 
 	&__wrapper {
@@ -25,7 +33,6 @@
 		background-color: v.$slate-dark;
 		width: 100%;
 		@include mx.flex($aling: flex-start, $gap: 0.8rem);
-
 	}
 
 	&__repayments,
@@ -38,6 +45,9 @@
 	&__price {
 		color: v.$lime;
 		font-size: 3.9em;
+		@include mx.mobile(v.$mobile) {
+			font-size: 1.9em;
+		}
 	}
 
 	&__box {
