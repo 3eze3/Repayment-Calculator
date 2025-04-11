@@ -1,0 +1,21 @@
+@use '../abstract/variables' as v;
+body {
+	background-color: v.$slate-100;
+	font-family: v.$plusjakatasans-md;
+	min-height: 100dvh;
+	hyphens: manual;
+	display: grid;
+	place-content: center;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h2,
+p {
+	text-align: center;
+}
+
+p {
+	font-family: v.$size-paragraph;
+}

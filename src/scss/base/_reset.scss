@@ -1,0 +1,77 @@
+@use '../abstract/variables' as v;
+@media (prefers-reduced-motion: reduce) {
+	* {
+		-webkit-animation: none !important;
+		animation: none !important;
+		-webkit-transition: none !important;
+		transition: none !important;
+	}
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+}
+*::before,
+*::after {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	object-position: center center;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	fill: currentColor;
+}
+
+form,
+input,
+button,
+label {
+	font: inherit;
+	hyphens: auto;
+	background-color: transparent;
+	color: inherit;
+	display: block;
+	color: v.$slate-700;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+input {
+	font-size: v.$plusjakatasans-bd;
+	font-weight: 700;
+	color: v.$slate-900;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
