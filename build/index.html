@@ -19,7 +19,7 @@
 			<section class="calculator">
 				<header class="calculator__header">
 					<h1 class="calculator__title">Mortgage Calculator</h1>
-					<button class="calculator__btn-clear">
+					<button class="calculator__btn-clear" id="btn-clear">
 						<span class="calculator__text-clear">Clear All</span>
 					</button>
 				</header>
@@ -28,7 +28,7 @@
 						<label class="form__label" for="amount">Mortgage Amount</label>
 						<input
 							class="form__input"
-							type="text"
+							type="number"
 							name="amount"
 							id="amount"
 							required />
@@ -37,12 +37,12 @@
 					</div>
 					<div class="form__wrapper">
 						<div class="form__group">
-							<label class="form__label form__label-specification" for="">
+							<label class="form__label form__label-specification" for="years">
 								Mortgage Term
 							</label>
 							<input
 								class="form__input form__input-specification"
-								type="text"
+								type="number"
 								name="years"
 								id="years"
 								required />
@@ -57,12 +57,11 @@
 							</label>
 							<input
 								class="form__input form__input-specification"
-								type="text"
+								type="number"
 								name="interest"
 								id="interest-rate"
 								required />
 							<span class="form__symbol form__symbol-right">%</span>
-
 							<span class="form__label-error"> This fiels is required</span>
 						</div>
 					</div>
